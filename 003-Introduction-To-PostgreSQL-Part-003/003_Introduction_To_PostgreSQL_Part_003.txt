@@ -1,0 +1,63 @@
+INSERT 0 3
+-[ RECORD 1 ]-+--------------
+product_id    | 2
+product_name  | Dress
+product_price | ₹100.00
+-[ RECORD 2 ]-+--------------
+product_id    | 1
+product_name  | Jeans
+product_price | ₹60.00
+-[ RECORD 3 ]-+--------------
+product_id    | 3
+product_name  | Running shoes
+product_price | ₹120.00
+-[ RECORD 4 ]-+--------------
+product_id    | 4
+product_name  | T-Shirt
+product_price | ₹20.00
+-[ RECORD 5 ]-+--------------
+product_id    | 5
+product_name  | Shirt
+product_price | ₹40.00
+
+ALTER TABLE
+                                                       Table "databasestar.products"
+       Column        |  Type   | Collation | Nullable |           Default            | Storage  | Compression | Stats target | Description 
+---------------------+---------+-----------+----------+------------------------------+----------+-------------+--------------+-------------
+ product_id          | integer |           | not null | generated always as identity | plain    |             |              | 
+ product_name        | text    |           |          |                              | extended |             |              | 
+ product_price       | money   |           |          |                              | plain    |             |              | 
+ is_product_in_stock | boolean |           |          | true                         | plain    |             |              | 
+Indexes:
+    "pk_products_product_id" PRIMARY KEY, btree (product_id)
+    "unique_products_product_name" UNIQUE CONSTRAINT, btree (product_name)
+Check constraints:
+    "check_products_product_price" CHECK (product_price > 0.00::money)
+Access method: heap
+
+-[ RECORD 1 ]-------+--------------
+product_id          | 1
+product_name        | Jeans
+product_price       | ₹60.00
+is_product_in_stock | t
+-[ RECORD 2 ]-------+--------------
+product_id          | 2
+product_name        | Dress
+product_price       | ₹100.00
+is_product_in_stock | t
+-[ RECORD 3 ]-------+--------------
+product_id          | 3
+product_name        | Running shoes
+product_price       | ₹120.00
+is_product_in_stock | t
+-[ RECORD 4 ]-------+--------------
+product_id          | 4
+product_name        | T-Shirt
+product_price       | ₹20.00
+is_product_in_stock | t
+-[ RECORD 5 ]-------+--------------
+product_id          | 5
+product_name        | Shirt
+product_price       | ₹40.00
+is_product_in_stock | t
+
