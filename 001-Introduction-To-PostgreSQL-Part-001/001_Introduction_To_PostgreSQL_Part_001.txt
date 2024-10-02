@@ -1,0 +1,91 @@
+-[ RECORD 1 ]----+-------------
+current_database | databasestar
+current_user     | databasestar
+current_role     | databasestar
+current_schema   | databasestar
+
+-[ RECORD 1 ]----+-------------
+current_database | databasestar
+
+List of databases
+-[ RECORD 1 ]-----+-------------
+Name              | databasestar
+Owner             | databasestar
+Encoding          | UTF8
+Locale Provider   | libc
+Collate           | en_IN.UTF-8
+Ctype             | en_IN.UTF-8
+ICU Locale        | 
+ICU Rules         | 
+Access privileges | 
+Size              | 7812 kB
+Tablespace        | databasestar
+Description       | 
+
+List of roles
+-[ RECORD 1 ]-----------------------------------------------------------
+Role name   | databasestar
+Attributes  | Create DB
+Description | 
+-[ RECORD 2 ]-----------------------------------------------------------
+Role name   | derek_banas
+Attributes  | Create DB
+Description | 
+-[ RECORD 3 ]-----------------------------------------------------------
+Role name   | postgres
+Attributes  | Superuser, Create role, Create DB, Replication, Bypass RLS
+Description | 
+
+List of roles
+-[ RECORD 1 ]-------------
+Role name   | databasestar
+Attributes  | Create DB
+Description | 
+
+List of schemas
+-[ RECORD 1 ]-----+---------------------------------------
+Name              | databasestar
+Owner             | databasestar
+Access privileges | 
+Description       | 
+-[ RECORD 2 ]-----+---------------------------------------
+Name              | public
+Owner             | pg_database_owner
+Access privileges | pg_database_owner=UC/pg_database_owner+
+                  | =U/pg_database_owner
+Description       | standard public schema
+
+List of schemas
+-[ RECORD 1 ]-----+-------------
+Name              | databasestar
+Owner             | databasestar
+Access privileges | 
+Description       | 
+
+CREATE TABLE
+                                                    Table "databasestar.products"
+    Column     |  Type   | Collation | Nullable |           Default            | Storage  | Compression | Stats target | Description 
+---------------+---------+-----------+----------+------------------------------+----------+-------------+--------------+-------------
+ product_id    | integer |           | not null | generated always as identity | plain    |             |              | 
+ product_name  | text    |           |          |                              | extended |             |              | 
+ product_price | money   |           |          |                              | plain    |             |              | 
+Indexes:
+    "pk_products_product_id" PRIMARY KEY, btree (product_id)
+Access method: heap
+
+INSERT 0 1
+-[ RECORD 1 ]-+-------
+product_id    | 1
+product_name  | Jeans
+product_price | ₹50.00
+
+INSERT 0 1
+-[ RECORD 1 ]-+--------
+product_id    | 1
+product_name  | Jeans
+product_price | ₹50.00
+-[ RECORD 2 ]-+--------
+product_id    | 2
+product_name  | Dress
+product_price | ₹100.00
+

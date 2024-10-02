@@ -1,0 +1,13 @@
+********* QUERY **********
+CREATE TABLESPACE databasestar
+OWNER databasestar
+LOCATION '/var/lib/pgsql/databasestar/';
+**************************
+
+********* QUERY **********
+CREATE TABLESPACE databasestar
+OWNER databasestar
+LOCATION '/var/lib/pgsql/databasestar/';
+**************************
+
+CREATE TABLESPACE

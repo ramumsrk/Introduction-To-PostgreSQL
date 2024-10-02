@@ -1,0 +1,52 @@
+Installed Packages
+Name         : postgresql
+Version      : 16.3
+Release      : 7.fc40
+Architecture : x86_64
+Size         : 7.6 M
+Source       : postgresql16-16.3-7.fc40.src.rpm
+Repository   : @System
+From repo    : updates
+Summary      : PostgreSQL client programs
+URL          : http://www.postgresql.org/
+License      : PostgreSQL
+Description  : PostgreSQL is an advanced Object-Relational database management system (DBMS).
+             : The base postgresql package contains the client programs that you'll need to
+             : access a PostgreSQL DBMS server, as well as HTML documentation for the whole
+             : system.  These client programs can be located on the same machine as the
+             : PostgreSQL server, or on a remote machine that accesses a PostgreSQL server
+             : over a network connection.  The PostgreSQL server can be found in the
+             : postgresql-server sub-package.
+
+Name         : postgresql-private-libs
+Version      : 16.3
+Release      : 7.fc40
+Architecture : x86_64
+Size         : 336 k
+Source       : postgresql16-16.3-7.fc40.src.rpm
+Repository   : @System
+From repo    : updates
+Summary      : The shared libraries required only for this build of PostgreSQL server
+URL          : http://www.postgresql.org/
+License      : PostgreSQL
+Description  : The postgresql-private-libs package provides the shared libraries for this
+             : build of PostgreSQL server and plugins build with this version of server.
+             : For shared libraries used by client packages that need to connect to a
+             : PostgreSQL server, install libpq package instead.
+
+Name         : postgresql-server
+Version      : 16.3
+Release      : 7.fc40
+Architecture : x86_64
+Size         : 29 M
+Source       : postgresql16-16.3-7.fc40.src.rpm
+Repository   : @System
+From repo    : updates
+Summary      : The programs needed to create and run a PostgreSQL server
+URL          : http://www.postgresql.org/
+License      : PostgreSQL
+Description  : PostgreSQL is an advanced Object-Relational database management system (DBMS).
+             : The postgresql-server package contains the programs needed to create
+             : and run a PostgreSQL server, which will in turn allow you to create
+             : and maintain PostgreSQL databases.
+
