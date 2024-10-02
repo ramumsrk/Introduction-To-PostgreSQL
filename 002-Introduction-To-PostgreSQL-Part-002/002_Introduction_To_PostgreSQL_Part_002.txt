@@ -1,0 +1,39 @@
+-[ RECORD 1 ]-+--------
+product_id    | 1
+product_name  | Jeans
+product_price | ₹50.00
+-[ RECORD 2 ]-+--------
+product_id    | 2
+product_name  | Dress
+product_price | ₹100.00
+
+-[ RECORD 1 ]-+-------
+product_id    | 1
+product_name  | Jeans
+product_price | ₹50.00
+
+UPDATE 1
+-[ RECORD 1 ]-+--------
+product_id    | 1
+product_name  | Jeans
+product_price | ₹60.00
+-[ RECORD 2 ]-+--------
+product_id    | 2
+product_name  | Dress
+product_price | ₹100.00
+
+ALTER TABLE
+ALTER TABLE
+                                                    Table "databasestar.products"
+    Column     |  Type   | Collation | Nullable |           Default            | Storage  | Compression | Stats target | Description 
+---------------+---------+-----------+----------+------------------------------+----------+-------------+--------------+-------------
+ product_id    | integer |           | not null | generated always as identity | plain    |             |              | 
+ product_name  | text    |           |          |                              | extended |             |              | 
+ product_price | money   |           |          |                              | plain    |             |              | 
+Indexes:
+    "pk_products_product_id" PRIMARY KEY, btree (product_id)
+    "unique_products_product_name" UNIQUE CONSTRAINT, btree (product_name)
+Check constraints:
+    "check_products_product_price" CHECK (product_price > 0.00::money)
+Access method: heap
+
